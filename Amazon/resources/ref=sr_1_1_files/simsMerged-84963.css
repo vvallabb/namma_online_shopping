@@ -1,0 +1,629 @@
+/* begin simCSS/similarities.css */
+#purchaseSimilarities .product, #sessionSimilarities .product {
+    font-weight: normal;
+}
+#purchaseSimilarities .author, #sessionSimilarities .author {
+    font-style: italic;
+}
+.sims-faceouts {
+    margin:5px 0 15px 0;
+    width: 100%;
+}
+.sims-faceouts p, .sims-faceouts div {
+    margin: 3px 0 0 0; 
+    padding-right: 15px;
+}
+.sims-faceouts .price {
+    white-space:nowrap; 
+}
+.sims-faceouts .rating-stars a, .sims-faceouts .rating-stars a:link {
+    text-decoration: none;
+}
+.sims-faceouts .rating-stars a:hover {
+    text-decoration: underline;
+}
+.sims-faceouts .rating-price {
+    margin:3px 0 0 0;
+    font-size:100%;
+}
+.sims-faceouts .rating {
+	margin-right:.5em;
+	color:#666;
+	white-space:nowrap;
+	font-size:80%;
+}
+.sims-faceouts .rating-stars {
+    margin: 0 0 0 0;
+} 
+.sims-faceouts .asinHeader {
+    height:2.5em;
+    margin-bottom:3px;
+}
+.sims-faceouts #featuredAsin.asinHeader {
+    color:#090;
+}
+.simFooter {
+    padding:0 0 10px 0;
+}
+
+.simsWrapper .shoveler .start-over {
+    font-size: 80%;    
+}
+.simsWrapper .shoveler .start-over a {
+    text-decoration:none;    
+}
+.simsWrapper .shoveler .start-over a:visited {
+    color: #004B91;   
+}
+
+.simsWrapper .shoveler {
+    position: relative;
+    width: 100%;
+}
+.simsWrapper .shoveler .shoveler-content {
+    margin: 0 35px 0 45px;
+    clear:both;
+}
+
+* html .simsWrapper .shoveler ul li {
+    display: inline;
+}
+.simsWrapper .fixed-line {
+  line-height:1.28em;
+}	
+.simsWrapper .shoveler .product-image {
+	margin-bottom:.45em;
+}
+.simsWrapper .shoveler .rating-price {
+	margin-top:.25em;
+        line-height:1.25em;
+}
+.simsWrapper .shoveler .prime-img {
+        vertical-align: -2px;
+}
+.simsWrapper .shoveler .sims-litb {
+	margin-top:.5em;
+        font-size:86%;
+}
+.simsWrapper .shoveler .pricetext {
+        margin-top: 0.25em;
+}
+.simsWrapper .shoveler .price {
+	white-space:nowrap;
+        margin-right:.6em;
+}
+.simsWrapper .shoveler .pricelong {
+        font-size:86%;
+}
+.simsWrapper .shoveler .rating-stars {
+	font-size:80%;
+        margin-right:0.25em;
+}
+.simsWrapper .shoveler .rating-stars a {
+    text-decoration:none;    
+}
+.simsWrapper .shoveler .rating-stars img {
+    padding-bottom:1px;    
+}
+
+.simsWrapper .shoveler-button-wrapper {
+    position:relative;
+    width:100%;
+}
+.simsWrapper .shvl-byline {
+    font-size: 86%;
+}
+
+.simsWrapper .shoveler div.back-button, 
+.simsWrapper .shoveler div.next-button,
+.simsWrapper .shoveler div.disabled-button {
+    position: absolute;
+    height: 50px; 
+    width: 25px;
+    top: 75px; 
+}
+.simsWrapper .shoveler div.next-button {
+    background: none;
+}
+.simsWrapper .shoveler .back-button,
+.simsWrapper .shoveler div.disabled-button {
+	left:0px;
+}
+.simsWrapper .shoveler .next-button,
+.simsWrapper .shoveler div.disabled-button {
+	right:0px;
+}
+.simsWrapper .shoveler .back-button a, 
+.simsWrapper .shoveler .next-button a {
+    position: relative;
+    font-size:70%;
+    cursor: pointer;
+    outline:none;
+}
+.simsWrapper .shoveler .back-button a .bg-text, 
+.simsWrapper .shoveler .back-button a .bg-image, 
+.simsWrapper .shoveler .next-button a .bg-text, 
+.simsWrapper .shoveler .next-button a .bg-image {
+    display: block;
+    height: 50px;
+    width: 25px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.simsWrapper .shoveler .back-button a .bg-image {
+    background-position: 0 0; 
+}
+.simsWrapper .shoveler .back-button a.depressed .bg-image {
+    background-position: 0 50px;
+}
+.simsWrapper .shoveler .next-button a .bg-image {
+    background-position: 25px 0; 
+}
+.simsWrapper .shoveler .next-button a.depressed .bg-image {
+    background-position: 25px 50px;
+}
+
+.simsWrapper .shoveler div.disabled-button {
+    opacity: 0.2; 
+    -moz-opacity: 0.2; 
+    filter: alpha(opacity=20); 
+    cursor: default;
+}
+.simsWrapper .shoveler .disclaim {
+    margin-bottom: 15px;
+}
+
+.simsWrapper {
+	overflow:hidden;
+}
+
+
+.simsWrapper .exploder {
+    position: relative;
+    width: 100%;
+}
+.simsWrapper .exploder .exploder-content {
+    margin: 0 5.5em 0 25px;
+    clear:both;
+}
+.simsWrapper .exploder .product-image {
+	margin-bottom:.45em;
+}
+.simsWrapper .exploder .rating-price {
+	margin-top:.25em;
+        line-height:1.25em;
+}
+.simsWrapper .exploder .sims-litb {
+	margin-top:.5em;
+        font-size:86%;
+}
+.simsWrapper .exploder .price {
+	white-space:nowrap;
+}
+.simsWrapper .exploder .rating-stars {
+	font-size:80%;
+        margin-right:0.25em;
+}
+.simsWrapper .exploder .rating-stars a {
+    text-decoration:none;    
+}
+.simsWrapper .exploder .rating-stars img {
+    padding-bottom:1px;    
+}
+.simsWrapper .exploder-button-wrapper {
+    position:relative;
+    width:100%;
+}
+.simsWrapper .exploder .exploder-pagination .minimize-button {
+    font-size: 86%;    
+}
+.simsWrapper .exploder .exploder-pagination .minimize-button a {
+    text-decoration:none;    
+}
+.simsWrapper .exploder .exploder-pagination .minimize-button a:visited {
+    color: #004B91;   
+}
+
+.simsWrapper .exploder div.more-button {
+    position: absolute;
+    top: 40px; 
+    height: 7em;
+    width: 5.5em;
+    right: 5px;
+    font-size:86%;
+}
+.simsWrapper .exploder .more-button a {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    text-decoration:none;  
+}
+.simsWrapper .exploder .more-button a:hover {
+  text-decoration:underline;
+}
+.simsWrapper .exploder .more-button a:active {
+  text-decoration:underline;
+  color: #FF9933;
+}
+.simsWrapper .exploder .more-button a .bg-text,
+.simsWrapper .exploder .more-button a .bg-image {
+  display: block;
+  overflow: hidden;
+  left: 0;
+  margin: 0 auto;
+}
+.simsWrapper .exploder .more-button a .bg-text {
+    height: 4.4em; 
+    width: 5.5em;
+}
+.simsWrapper .exploder .more-button a.disabled {
+  cursor: default;
+}
+.simsWrapper .exploder .more-button a.disabled:hover {
+  text-decoration: none;
+}
+.simsWrapper .exploder .more-button a.disabled .bg-text {
+  color: #CCC;
+}
+.simsWrapper .exploder .more-button a.disabled .bg-image {
+  background-position: 0 -13px;
+}
+.simsWrapper .exploder .more-button a.minimize-button {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #C9E1F4;
+  display: block;   
+}
+.simsWrapper .exploder a.show-more-button {
+  font-weight: bold;
+}
+.simsWrapper .exploder .explodeRow {
+  padding-top: 15px;
+}
+
+.shvl {
+	width:100%;
+	}
+.shvl td#purchaseShvlCellBack {
+	width:45px;
+	}
+.shvl td#purchaseShvlCellNext {
+	width:35px;
+	}
+.shvl td div {
+	text-align:left;
+	font-size:86%;
+	}
+.shvl .image-title {
+	margin:0 0 7px 0;
+	}
+.shvl .shvl-cell-title {
+	margin:0 0 0 0;
+	}
+.shvl .rating-price {
+	margin:3px 0 0 0;
+        font-size:100%;
+	}
+.shvl .price {
+	white-space:nowrap; 
+	}
+.shvl .rating {
+	margin-right:.5em;
+	color:#666;
+	white-space:nowrap;
+	font-size:80%;
+	}
+.shvl .rating-stars {
+	margin: 0 0 0 0;
+	}
+.shvl .rating-stars a,
+.shvl .rating-stars a:link {
+    text-decoration: none;
+    }
+.shvl .rating-stars a:hover {
+    text-decoration: underline;
+    }
+.shvl .arrow {
+	width:25px;
+	padding:0;
+	}
+.shvlBack,
+.shvlNext {
+	position:relative;
+	}
+.shvlBack a,
+.shvlNext a,
+.shvlBack .bg-text,
+.shvlNext .bg-text,
+.shvlBack .bg-image,
+.shvlNext .bg-image {
+	display:block;  
+	width:25px;
+	height:50px;
+	}
+.shvlBack a,
+.shvlNext a {
+	position:relative;
+	cursor:pointer;
+	}
+.shvlBack .bg-text,
+.shvlNext .bg-text,
+.shvlBack .bg-image,
+.shvlNext .bg-image { 
+	position:absolute;
+	overflow:hidden;
+	left:0px;
+	}
+.shvlBack a.down .bg-image {
+	background-position: 0px 50px;
+}
+.shvlNext a.down .bg-image {
+	background-position: 25px 50px;
+	}	
+#purchaseshvlNJS, 
+#browseNodeshvlNJS, 
+#disperseshvlNJS, 
+#sessionshvlNJS {
+       width:auto;     
+}
+#purchaseshvlNJS td, 
+#browseNodeshvlNJS td, 
+#disperseshvlNJS td, 
+#sessionshvlNJS td {
+        padding-right:20px;     
+}
+
+.shvlPagination {
+        width:100%;
+        padding:2px 0 2px 0;
+        margin:-1.8em 0 1.2em 0; 
+        text-align:right;
+        }
+
+.shvlPagination a {
+        text-decoration:none;
+        }
+
+.shvlPagination a:hover {
+        text-decoration:underline;
+        }
+
+.shvlPagination a:visited {
+        color:#039;
+        }
+
+.shvlPagesText {
+        background-color:#fff;
+}
+
+
+/* end simCSS/similarities.css */
+
+/* begin bxgyCSS/buyxgety.css */
+.bxgy-text {
+	margin:0 0 .75em 0;
+	width:90%;
+	}
+.bxgy-bundle {
+	margin:0 0 .75em 0;
+	float:left;
+	}
+.bxgy-bundle td.plus {
+	padding:0 5px 0 5px;
+        font-size:105%;
+        font-weight:bold;color:#999;
+	}	
+.bxgy-priceblock {
+	margin:0 0 0 185px;
+	}
+.bxgy-priceblock .button-margin, #bxgy_price_button_block .button-margin {
+        margin: 5px 5px 5px 0;
+}
+#bxgy_wl_button_block .wl_three { background-position: 0px 0px; }
+#bxgy_wl_button_block .wl_two, .bxgy-priceblock .wl_two { background-position: 0px -22px; }
+#bxgy_wl_button_block .wl_one, .bxgy-priceblock .wl_one { background-position: 0px -44px; }
+#bxgy_price_button_block .ac_three { background-position: 0px 0px; }
+#bxgy_price_button_block .ac_two, .bxgy-priceblock .ac_two { background-position: 0px -22px; }
+#bxgy_price_button_block .ac_one { background-position: 0px -44px; }
+#bxgy_price_button_block .pre_three { background-position: 0px -66px; }
+#bxgy_price_button_block .pre_two, .bxgy-priceblock .pre_two { background-position: 0px -88px; }
+#bxgy_price_button_block .pre_one { background-position: 0px -110px; }
+#bxgy_points {
+	color: #900;
+}	
+
+.bxgySellerMessage,
+.bxgySellerInfo,
+.bxgySellerInfoNonJS {
+	font-size:86%;
+	color:#555;
+	}
+.bxgySellerMessage {
+	margin:0 0 .5em 0;
+        display: none;
+	}
+.bxgySellerInfo, .bxgySellerInfoNonJS {
+	margin:.5em 0 1em 1em;
+	}
+.bxgyInfoBlock { display: none }
+
+.bxgySellerInfo .availGreen,
+.bxgySellerInfo .availOrange,
+.bxgySellerInfoNonJS .availGreen,
+.bxgySellerInfoNonJS .availOrange {
+	font-size:112%;
+	}
+.selected .plusShippingText,
+.bxgyPriceBlock1Asin .plusShippingText,
+.bxgyPriceBlock2Asin .plusShippingText,
+.bxgyPriceBlock3Asin .plusShippingText {
+	white-space:nowrap;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:86%;
+}
+
+.bxgyText {
+	margin:0 0 .75em 0;
+	width:90%;
+	}
+.bxgyBundle {
+	margin: 10px 15px 10px 0 ;
+	float:left;
+	}
+.bxgyBundle td.plus {
+	padding:0 5px 0 5px;
+	font-size:105%;
+	font-weight:bold;
+	color:#999;
+	}	
+.bxgyPriceBlock3Asin, .bxgyPriceBlock2Asin, .bxgyPriceBlock1Asin {
+        width: 80%;
+ 	left: 1.5em;
+	padding:10px 0 0 0; 
+	}
+ul.bxgySelectAsins, ul.bxgyInfoBlock, ul.bxgyInfoBlockNonJS {
+	margin:0;
+	list-style:none;
+	padding:0 0 .75em 1.75em;
+	clear:left;
+	width:78%;
+	}
+ul.bxgyInfoBlock {
+	padding-left: 0;
+}
+ul.bxgySelectAsins li, ul.bxgyInfoBlock li, ul.bxgyInfoBlockNonJS li {
+	position: relative;
+	display:block;
+	margin:0 0 .35em 0;
+	}
+.bxgySelectAsins input.check, .bxgyInfoBlock input.check, ul.bxgyInfoBlockNonJS input.check {
+	position: absolute;
+	left:-1.75em;
+	}
+.bxgySelectAsins .unselected {
+	opacity:.20;
+	filter:alpha(opacity=20);
+	zoom:1;
+	}
+.bxgySelectAsins .unselected a {
+	cursor:default;
+	outline:0;
+	}
+.bxgySelectAsins .unselected a:visited {
+	color:#004B91;
+	text-decoration:underline;
+	}
+.bxgySelectAsins .unselected a:hover{
+	color:#004B91;
+	text-decoration:underline;
+	}
+.bxgyButton {
+	margin-top: 5px; 
+	margin-bottom: 5px;
+	}	
+
+.bxgy-feedback-default, .bxgy-feedback-confirm {
+	font-size: 86%;
+	margin-left: 0.25em;
+	margin-bottom: 0.25em;
+	clear: left;
+	}
+.bxgy-feedback-default {
+	color: #666;
+	}
+.bxgy-feedback-confirm {
+	color: #009900;
+	}
+#bxgy-hmd-form {
+	margin-bottom: 0px;
+}
+.bxgy-hmd-box-headline {
+	font-size: 13px;
+	margin-bottom: 12px;
+	}
+.bxgy-hmd-feedback-options .input-row {
+	margin-top:0px;
+        margin-bottom:5px;
+	}	
+.bxgy-hmd-feedback-options .input-element {
+	margin-left:5px;
+	margin-right:5px;
+	}	
+textarea#more-bxgy-feedback {
+	width: 485px;
+	padding: 0;
+	margin: 0;
+	}
+.bxgy-feedback-text-blur {
+	color: #AAAAAA;	
+	}
+.bxgy-hmd-help {
+	border: solid 1px #bbb;
+	background-color: #ffffdd;
+	width: 485px;
+	font-size: 11px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	}
+.bxgy-hmd-help-icon {
+	margin-top: 7px;
+	margin-right: 10px;
+	margin-left: 10px;
+	float: left;
+	}
+.bxgy-hmd-help-link {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	}
+
+/* end bxgyCSS/buyxgety.css */
+
+/* begin condProbCSS/conditionalProbability.css */
+.cpsims div.content {
+  margin-left: 20px;
+}
+.cpsims td.faceout {
+  padding: 0px 10px 10px 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+.cpsims td.asinDetails {
+  padding: 0px 0px 10px 0px;
+  text-align: left;
+  vertical-align: middle;
+}
+.cpsims .activeAsin {
+  color: #009900;
+}
+.cpsims .asinList {
+  margin-top: 12px;
+}
+.cpsims .simFooter {
+  margin-top: 5px;
+}
+.cpsims .starImage {
+  vertical-align: middle;
+}
+.cpsims div.medialine td.asinDetails div {
+  display: inline;
+}
+.cpsims .rating-stars {
+  font-size: xx-small;
+}
+.cpsims .rating-stars a,
+.cpsims .rating-stars a:link {
+    text-decoration: none;
+}
+.cpsims .rating-stars a:hover {
+    text-decoration: underline;
+}
+#vtpsims div.content {
+  margin-left: 20px;
+}
+
+
+/* end condProbCSS/conditionalProbability.css */

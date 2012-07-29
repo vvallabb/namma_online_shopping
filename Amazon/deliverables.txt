@@ -1,0 +1,26 @@
+Dear Sir,
+
+The following are the deliverables for Team 6 (Amazon.com) as discussed in the meeting on 12 Mar 2010.
+
+Deliverables for this semester - 2nd sem
+
+   1. Implement a module to convert the currencies from dollars to rupees and vice versa
+   2. There should be a feature for incorporating publishers and courier services. When the product gets delivered, courier has to inform the publisher and the publisher also has to inform Amazon.
+   3. Implement addition of items to Shopping Cart.
+   4. If you click on a link whose functionality is not yet implemented, display "Site under construction".
+   5. Create a jsp where one of the tiles should have to be the output of another tile.
+   6. Create a jsp where one of the tiles action should be another GUI.
+   7. Implement the entire flow for another product, "Laptops" along with "Kindle Books".
+   8. Introduce a discount for a product at say 30% off or buy one , get one free.
+   9. Create a jsp which can be used as an interface in other jsps.
+  10. Implement summary of shopping cart.
+  11. Register a user
+
+Things to be implemented in future
+
+   1. VAT/tax on a bill
+   2. Regional language support
+   3. Voice support for the order page
+   4. USE HTTPS for login
+   
+   private variables

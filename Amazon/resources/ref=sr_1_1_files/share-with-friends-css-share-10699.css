@@ -1,0 +1,395 @@
+
+
+/*! ###
+    Copyright (c) 2008 Amazon.com, Inc., and its Affiliates.
+    All rights reserved.
+    Not to be reused without permission
+    $DateTime: 2008/09/16 17:15:38 $
+    ###
+*/
+
+.productImage {
+ max-width: 90px;
+ _width: 90px;
+}
+
+.tellfriend {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: xx-small;
+ border-top: 5px dashed #BEBEBE;
+ border-right: none;
+ border-bottom: 10px dashed #BEBEBE;
+ border-left: none;
+ margin-top: 2em;
+ margin-bottom: 2em;
+ text-align: center;
+ vertical-align:middle;
+ padding-top: .6em;
+ padding-bottom: .6em;
+}
+
+#tafMain .productTitle {
+  font-weight: bold;
+}
+
+.mail {
+ border: none;
+ padding-right: 6px;
+}
+
+.bodyText {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+}
+
+.blueBackground {
+   background-color: #EDF7FC;
+   height: 50px;
+}
+
+.smallGrey {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: xx-small;
+    color: #737373;
+}
+
+.defaultText {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #737373;
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #BEBEBE;
+}
+
+.errorText {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: red;
+}
+
+.boldErrorText {
+    font-weight: bold;
+    color: red;
+}
+
+.tafTitleText {
+    color: black;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+.largeText {
+    font-size: medium;
+    padding: 15px 0 15px 0;
+}
+
+.textArea {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #BEBEBE;
+}
+
+.linkImage {
+    border: 5px purple;
+    cursor: pointer;
+}
+
+.tafShareText {
+    padding: 0 5px;
+}
+
+.tafSocialButton {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.tellfriendConfirmation {
+    padding: 1em 20px 0px;
+    font-size: 1.1em;
+}
+
+.confirmationBox {
+    color: green;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.5em;
+    margin: 1em -5px;
+}
+
+.confirmationBox .success {
+    border: 0 none;
+    font-weight: bold;    
+    font-size: 1.2em;
+    margin-bottom: 4px;
+}
+
+.confirmationBox .success img {
+    vertical-align: bottom;
+}
+
+.confirmationOrangeText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    font-weight: bold;
+    color: #CC6600;
+}
+
+.errorRedText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    font-weight: bold;
+    color: red;
+    margin: 0em;
+}
+
+.greyBorder {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #999;
+
+}
+
+.tellfriendConfirmation .inviteesTitle {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.tellfriendConfirmation .inviteesList {
+    margin: 0em;
+    padding-left: 2.5em;
+}
+
+.inviteesList li {
+    list-style-type: disc;
+}
+
+.permalink {
+    margin-top: 6px;
+}
+
+.tellfriendConfirmation .buttonBox {
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+.solidLine {
+    border:solid #ddeeff;
+    border-width:1px 0 0;
+    height:0;
+}
+
+.dashedLine {
+    border:dashed black;
+    border-width:1px 0 0;
+    height:0;
+}
+
+
+.poWindow {
+    position: absolute;
+    z-index: 10;
+    margin: auto;
+}
+
+.checkbox {
+    margin: 2px 0 2px 0;
+    padding: 0px;
+}
+
+.manipCheckBoxArea {
+    font-size: 0.8em;
+    margin-bottom: 4px;
+}
+
+.manipCheckBoxArea a {
+    text-decoration: none;
+}
+
+.checkBoxArea {
+    margin-bottom: 15px;
+    overflow: auto;
+    border: 1px solid #BEBEBE;
+}
+
+
+.tafPoBackground {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 99;
+    width: 100%;
+}
+.tafPoBackground .header {
+    position: absolute;
+    height: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.tafPoBackground .header .left {
+    position: absolute;
+    height: 34px; width: 34px;
+    left: 0;
+}
+.tafPoBackground .header .middle {
+    height: 34px;
+    margin:  0 34px 0 34px;
+}
+.tafPoBackground .header .right {
+    position: absolute;
+    height: 34px; width: 34px;
+    right: 0;
+    top: 0;
+}
+.tafPoBackground .body { 
+    position: absolute;
+    width: 100%;
+    top: 34px;
+    bottom: 34px;
+    
+    
+    height: expression(document.getElementById('tafPoBackground').clientHeight-68);
+}
+.tafPoBackground .body .left {
+    position: absolute;
+    width: 34px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.tafPoBackground .body .middle {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 100%;
+    margin: 0 34px 0 34px;
+}
+.tafPoBackground .body .right {
+    position: absolute;
+    width: 34px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.tafPoBackground .footer {
+    position: absolute;
+    height: 34px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.tafPoBackground .footer .left {
+    position: absolute;
+    height: 34px; width: 34px;
+    left: 0;
+}
+.tafPoBackground .footer .middle {
+    height: 34px;
+    margin:  0 34px 0 34px;
+}
+.tafPoBackground .footer .right {
+    position: absolute;
+    height: 34px; width: 34px;
+    right: 0;
+    top: 0;
+}
+
+
+.tafPoContent {
+    position: relative;
+    z-index: 100;
+    padding: 10px 18px 18px 18px;
+    font-size: 1em;
+}
+.tafPoContent .titleClose {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    margin: 5px 5px 0 0;
+    font-size: .9em;
+}
+.tafPoContent .titleClose img {
+    margin-left: 4px;
+}
+.tafPoContent .titleClose a {
+    text-decoration: none;
+    padding: 0 5px 0 5px;
+}
+.tafPoContent .titleClose a:hover {
+    text-decoration: underline;
+}
+.tafPoContent .titleBar {
+    background-color: #eaf3fe;
+    border-bottom: 1px solid #c2ddf2;
+    margin: 0;
+    padding: 5px 10px 5px 10px;
+}
+.tafPoContent .titleText {
+    margin: 4px 0 4px 0;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+.tafPoContent .sectionText {
+    color: #cc6600;
+    margin-top: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.tafPoContent .contentArea {
+    margin: 0;
+    padding: 0;
+}
+.tafPoContent .productTitle {
+    font-weight: bold;
+}
+
+.tafPoContent .socialSites {
+    margin: 5px 0;
+}
+
+.tafPoContent .socialSites div.sectionText {
+    float: left;
+    width: 100px;
+}
+
+.tafPoContent .socialSites div.sites {
+    margin-left: 85px;
+}
+
+.tafPoContent .socialSites div.sites div {
+    display: inline-block;
+    margin-left: 20px;
+    text-align: center;
+    zoom: 1;
+    *display: inline;
+}
+
+.tafPoContent .socialSites div.sites img {
+    display: block;
+    margin: 0 auto 2px auto;
+}
+
+.tafPoContent .socialSites div.sites a.text {
+    display: block;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.tafPoContent table.emailFields th {
+    padding: 10px 10px 0 0;
+}
+
+.tafPoContent table.emailFields td {
+    padding-top: 10px;
+}
+
+.tafPoContent span.clickable img {
+    cursor: pointer;
+}
