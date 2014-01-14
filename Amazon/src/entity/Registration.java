@@ -1,19 +1,19 @@
 package entity;
 
 public class Registration {
-	String fname;
-	String mname;
-	String sname;
-	String email;
-	String add1; 
-	String add2; 
-	String city; 
-	String state; 
-	String country;
-	String uname;
-	String upass;
-	String zip;
-	String phone;
+	private String fname;
+	private String mname;
+	private String sname;
+	private String email;
+	private String add1; 
+	private String add2; 
+	private String city; 
+	private String state; 
+	private String country;
+	private String uname;
+	private String upass;
+	private String zip;
+	private String phone;
 	
 	public String getFirstName(){
 		return fname;

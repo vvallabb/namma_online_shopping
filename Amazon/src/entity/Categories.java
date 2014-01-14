@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Categories {
 
 	private ArrayList categoryNames;
-	
+
 	public ArrayList getCategoryNames() {
 		return categoryNames;
 	}
@@ -14,5 +14,4 @@ public class Categories {
 		this.categoryNames = categoryNames;
 	}
 
-	
 }
