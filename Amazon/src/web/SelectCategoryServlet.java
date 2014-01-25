@@ -24,76 +24,76 @@ import entity.Books;
  */
 public class SelectCategoryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public SelectCategoryServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public SelectCategoryServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("inside Select Category servlet");
 		String subCategory = request.getParameter("category");
 		String pageNumber = request.getParameter("pagenumber");
 		String country = request.getParameter("country_box");
-		
+
 		HttpSession session = request.getSession();
 		DBService cs = new DBService();
 		Connection c = cs.initiateCon();
-		
-		if(country!=null)
-		{
-			String currency = cs.getUserCurrency(country,c);
-			String conversionRate = cs.getUserConversionRate(country,c);
-			System.out.println("conversion rate:"+conversionRate);
+
+		if (country != null) {
+			String currency = cs.getUserCurrency(country, c);
+			String conversionRate = cs.getUserConversionRate(country, c);
+			System.out.println("conversion rate:" + conversionRate);
 			session.setAttribute("currency", currency);
 			session.setAttribute("conversionRate", conversionRate);
 		}
-		
+
 		ArrayList bookArr = null;
 		ArrayList bookGenre = null;
 		ArrayList countryArr = null;
-		int bookCount=0;
-		
+		int bookCount = 0;
+
 		SubcategoryDAO sDao = new SubcategoryDAO();
-		
-		String categoryName = sDao.getCategory(subCategory,c);
+
+		String categoryName = sDao.getCategory(subCategory, c);
 		ArrayList itemArr = sDao.getAllItemsForSubcategory(subCategory, c);
 		ItemDAO itemDAO = new ItemDAO();
-		if(categoryName.equals("Books"))
-		{
+		if (categoryName.equals("Books")) {
 			bookArr = itemDAO.getBooks(itemArr, c);
-			bookCount = itemDAO.getBookCount(itemArr,c);
+			bookCount = itemDAO.getBookCount(itemArr, c);
 			bookGenre = itemDAO.getBooksGenre(c);
 			countryArr = itemDAO.getAllCountries(c);
 		}
-		
-		//if(subCategory.equals("Laptops & Netbooks"))
-		
+
+		// if(subCategory.equals("Laptops & Netbooks"))
+
 		Iterator bookIterator = bookArr.iterator();
-		
-		while(bookIterator.hasNext())
-		{
-			Books book = (Books)bookIterator.next();
-			System.out.println("Book name:"+book.getBook_name());
+
+		while (bookIterator.hasNext()) {
+			Books book = (Books) bookIterator.next();
+			System.out.println("Book name:" + book.getBook_name());
 		}
 		cs.closeCon(c);
-		
-		if(subCategory.equals("Kindle Books"))
-		{
+
+		if (subCategory.equals("Kindle Books")) {
 			System.out.println("inside kindle books");
 			request.setAttribute("countryArr", countryArr);
 			request.setAttribute("booksArr", bookArr);
@@ -101,15 +101,15 @@ public class SelectCategoryServlet extends HttpServlet {
 			request.setAttribute("category", categoryName);
 			request.setAttribute("subcategory", subCategory);
 			request.setAttribute("bookcount", bookCount);
-			if(pageNumber==null)
-			request.setAttribute("pagecount", 1);
+			if (pageNumber == null)
+				request.setAttribute("pagecount", 1);
 			else
 				request.setAttribute("pagecount", Integer.parseInt(pageNumber));
-			RequestDispatcher rd = request.getRequestDispatcher("kindlebooks.jsp");
+			RequestDispatcher rd = request
+					.getRequestDispatcher("kindlebooks.jsp");
 			rd.forward(request, response);
 		}
-		
-		
+
 	}
 
 }

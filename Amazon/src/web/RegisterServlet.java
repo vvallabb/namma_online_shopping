@@ -22,19 +22,21 @@ import dao.*;
  */
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public RegisterServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public RegisterServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String fname = request.getParameter("fname");
 		String mname = request.getParameter("mname");
@@ -49,7 +51,7 @@ public class RegisterServlet extends HttpServlet {
 		String upass = request.getParameter("upass");
 		String zip = request.getParameter("zip");
 		String phone = request.getParameter("phone");
-	
+
 		Registration user = new Registration();
 		user.setFirstName(fname);
 		user.setMiddleName(mname);
@@ -63,10 +65,10 @@ public class RegisterServlet extends HttpServlet {
 		user.setZip(zip);
 		user.setUname(uname);
 		user.setPassword(upass);
-		
+
 		DBService cs = new DBService();
 		Connection c = cs.initiateCon();
-		
+
 		RegistrationDAO reg_user = new RegistrationDAO();
 		int i = reg_user.addUser(user);
 		Categories categories = new Categories();
@@ -74,29 +76,30 @@ public class RegisterServlet extends HttpServlet {
 		CategoryDAO catDAO = new CategoryDAO();
 		SubcategoryDAO subcatDAO = new SubcategoryDAO();
 		categories.setCategoryNames(catDAO.getAllCategories(c));
-		//subcategories.setSubcategoryNames(subcatDAO.getAllSubcategories(c));
+		// subcategories.setSubcategoryNames(subcatDAO.getAllSubcategories(c));
 		request.setAttribute("subcategories", subcatDAO.getAllSubcategories(c));
 		request.setAttribute("categories", categories.getCategoryNames());
-		
-		if(i==0){
-	        HttpSession session = request.getSession();
-	        session.setAttribute("user_details", user);
-	        session.setAttribute("uname", uname);
+
+		if (i == 0) {
+			HttpSession session = request.getSession();
+			session.setAttribute("user_details", user);
+			session.setAttribute("uname", uname);
 			session.setAttribute("upass", upass);
-	        RequestDispatcher rd = request.getRequestDispatcher("home1.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("home1.jsp");
 			rd.forward(request, response);
-		}
-		else if(i==-1){
-	        request.setAttribute("error", i);
-	        RequestDispatcher rd = request.getRequestDispatcher("Register.jsp");
+		} else if (i == -1) {
+			request.setAttribute("error", i);
+			RequestDispatcher rd = request.getRequestDispatcher("Register.jsp");
 			rd.forward(request, response);
 		}
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

@@ -1,6 +1,5 @@
 package web;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -18,35 +17,40 @@ import dao.TextBookSubCategoryDAO;
  */
 public class textBooksServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public textBooksServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public textBooksServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 
-        TextBookSubCategoryDAO SubCat = new TextBookSubCategoryDAO();
-        ArrayList scArr = SubCat.getSubSubcategoryTextBook();
-        request.setAttribute("TextBookSubCategoryatr", scArr);
-        RequestDispatcher rd = request.getRequestDispatcher("enterTextBook.jsp");
-	rd.forward(request, response);
-		//response.sendRedirect("enterTextBooks.jsp");
+		TextBookSubCategoryDAO SubCat = new TextBookSubCategoryDAO();
+		ArrayList scArr = SubCat.getSubSubcategoryTextBook();
+		request.setAttribute("TextBookSubCategoryatr", scArr);
+		RequestDispatcher rd = request
+				.getRequestDispatcher("enterTextBook.jsp");
+		rd.forward(request, response);
+		// response.sendRedirect("enterTextBooks.jsp");
 	}
 
 }

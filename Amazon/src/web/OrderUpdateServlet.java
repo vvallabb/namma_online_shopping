@@ -20,45 +20,51 @@ import dao.OrderDAO;
  */
 public class OrderUpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public OrderUpdateServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public OrderUpdateServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		String orderId = request.getParameter("order");
-		
-		//System.out.println("order:"+orderId);
+
+		// System.out.println("order:"+orderId);
 		OrderDAO orderDAO = new OrderDAO();
 		orderDAO.updateOrder(orderId);
 		HttpSession session = request.getSession();
-		
+
 		DBService cs = new DBService();
 		Connection c = cs.initiateCon();
-		ArrayList order = cs.authenticateCourier((String)session.getAttribute("uname"), (String)session.getAttribute("upass"), c);
-		
-		//String orders = null;
+		ArrayList order = cs.authenticateCourier(
+				(String) session.getAttribute("uname"),
+				(String) session.getAttribute("upass"), c);
+
+		// String orders = null;
 		request.setAttribute("orders", order);
 		RequestDispatcher rd;
-		
-			rd = request.getRequestDispatcher("courier.jsp");
-		
+
+		rd = request.getRequestDispatcher("courier.jsp");
+
 		rd.forward(request, response);
-		
+
 	}
 
 }

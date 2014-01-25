@@ -5,7 +5,6 @@ import java.util.*;
 import common.*;
 import entity.ShoppingCart;
 
-
 public class ShoppingCartDAO {
 
 	public ArrayList getShoppingCartDetails(String username) {
