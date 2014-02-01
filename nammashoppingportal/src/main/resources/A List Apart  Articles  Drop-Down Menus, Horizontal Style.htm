@@ -1,0 +1,407 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+	<title>A List Apart: Articles: Drop-Down Menus, Horizontal Style</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="alternate" type="application/rss+xml" title="A List Apart main RSS feed" href="http://www.alistapart.com/site/rss">
+	<link rel="stylesheet" type="text/css" href="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/print.css" media="print"> 
+	<script type="text/javascript">if(top!=self){top.location.replace(self.location.href);}</script>
+	<link rel="stylesheet" href="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/article.css" type="text/css" media="all">
+	
+	
+		
+		
+	<script charset="utf-8" id="injection_graph_func" src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/injection_graph_func.js"></script><script id="_nameHighlight_injection"></script><link class="skype_name_highlight_style" href="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/injection_nh_graph.css" type="text/css" rel="stylesheet" charset="utf-8" id="_injection_graph_nh_css"><link href="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/skypeplugin_dropdownmenu.css" type="text/css" rel="stylesheet" charset="utf-8" id="_skypeplugin_dropdownmenu_css"></head><body class="articles" onload="">
+	
+
+<ul id="navbar">
+  <li id="articles"><a href="http://www.alistapart.com/articles/" title="Articles">Articles</a></li>
+  <li id="topics"><a href="http://www.alistapart.com/topics/" title="Topics">Topics</a></li>
+  <li id="about"><a href="http://www.alistapart.com/about/" title="About">About</a></li>
+  <li id="contact"><a href="http://www.alistapart.com/contact/" title="Contact">Contact</a></li>
+  <li id="contribute"><a href="http://www.alistapart.com/contribute/" title="Contribute">Contribute</a></li>
+  <li id="feed"><a href="http://www.alistapart.com/feed/" title="Feed">Feed</a></li>
+</ul>
+<h1 id="masthead"><a href="http://www.alistapart.com/"><img src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/alalogo.gif" alt="A LIST Apart: For People Who Make Websites"></a></h1>
+
+
+<div id="ish">
+	<a href="http://www.alistapart.com/issues/184" title="Issue 184">No. <em>184</em></a>
+</div>
+
+
+<div id="main">
+	
+	
+	
+	
+	<div id="content" class="column">
+
+		<div class="ishinfo">June <b>29, 2004</b></div>
+		
+		<h1 class="title"><a href="http://www.alistapart.com/articles/horizdropdowns/">Drop-Down Menus, Horizontal&nbsp;Style</a></h1>
+		<h3 class="byline">
+			by 
+	
+	<a href="http://www.alistapart.com/authors/r/nickrigby"> Nick Rigby</a>
+	
+
+		</h3>
+		
+		<ul id="metastuff">
+						<li>
+				Published in: <a href="http://www.alistapart.com/topics/topic/browsers/" title="Browsers">Browsers</a>, <a href="http://www.alistapart.com/topics/topic/css/" title="CSS">CSS</a>, <a href="http://www.alistapart.com/topics/topic/htmlxhtml/" title="HTML and XHTML">HTML and XHTML</a>, <a href="http://www.alistapart.com/topics/topic/layout/" title="Layout">Layout</a>
+									<b>|</b>
+							</li>
+							<li class="discuss">
+					<p><a href="http://www.alistapart.com/comments/horizdropdowns/">Discuss this article »</a></p>
+				</li>
+					</ul>
+		
+		<div id="articletext">
+			<p>Anyone
+who has created drop-down menus will be familiar with the large
+quantities of scripting such menus typically require. But, using
+structured <abbr title="HyperText Markup Language">HTML</abbr>  and simple <abbr title="Cascading Style Sheets">CSS</abbr>,
+it is possible to create visually appealing drop-downs that are easy to
+edit and update, and that work across a multitude of browsers,
+including Internet Explorer. Better still, for code-wary designers, no
+JavaScript is required! (Actually, a tiny bit of JavaScript is needed,
+but it’s not what you think.)</p>
+
+<p>Here’s a <a href="http://www.alistapart.com/d/horizdropdowns/horizontal.htm">sneak preview</a> of the menu in action.</p> 
+
+<h2>Creating the menu</h2> 
+<p>The first and most important part of creating our menu is the menu
+structure itself. The best way to do this is to build an unordered
+list, with each sub-menu appearing as a list within its parent list
+item. Sound complicated? It’s actually very straightforward:</p> 
+<pre>  &lt;ul&gt; 
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt; 
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt; 
+      &lt;ul&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;History&lt;/a&gt;&lt;/li&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;Team&lt;/a&gt;&lt;/li&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;Offices&lt;/a&gt;&lt;/li&gt; 
+      &lt;/ul&gt; 
+    &lt;/li&gt; 
+    &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt; 
+      &lt;ul&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;Web Design&lt;/a&gt;&lt;/li&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;Internet 
+            Marketing&lt;/a&gt;&lt;/li&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;Hosting&lt;/a&gt;&lt;/li&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;Domain Names&lt;/a&gt;&lt;/li&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;Broadband&lt;/a&gt;&lt;/li&gt; 
+      &lt;/ul&gt; 
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contact Us&lt;/a&gt; 
+      &lt;ul&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;United Kingdom&lt;/a&gt;&lt;/li&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;France&lt;/a&gt;&lt;/li&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;USA&lt;/a&gt;&lt;/li&gt; 
+        &lt;li&gt;&lt;a href="#"&gt;Australia&lt;/a&gt;&lt;/li&gt; 
+      &lt;/ul&gt; 
+    &lt;/li&gt; 
+  &lt;/ul&gt;
+</pre> 
+<p>That’s it: some simple <abbr title="HyperText Markup Language">HTML</abbr> that is both accessible and easy to edit.</p> 
+
+<h2>Visually appealing?</h2> 
+<p>If you have previewed the menu above, you’ll see a pretty boring
+list of items. And I promised you it would be visually appealing! Let’s
+add some style.</p>
+ 
+<p>The first step is to remove the indents and bullets from the unordered list and define the width of our menu items.</p> 
+
+<pre>ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 150px;
+	}
+</pre> 
+<p>Next, we need to position our list items. Fortunately, these will
+stack vertically by default, which is what we require. However, we must
+set the position as <code>relative</code>, because we will need to position the sub-menus absolutely within them.</p> 
+<pre>ul li {
+	position: relative;
+	}
+</pre> 
+<p>Next step is the sub-menus. We want each sub-menu to appear to the right of its parent menu item when that item is hovered over.</p> 
+<pre>li ul {
+	position: absolute;
+	left: 149px;
+	top: 0;
+	display: none;
+	}
+</pre> 
+<p>Using the “left” and “top” attributes, we can absolutely position
+each sub-menu within its parent menu item. You will notice I have set
+the “left” property to 149px (1px less than the width of the menu
+items), which allows the sub-menus to overlap the main menu and not
+produce a double border. (You’ll see what I mean later.)</p>
+<p>We have also set display to “none,” as we don’t want the sub-menus to be visible by default.</p> 
+<p>So now we have the <a href="http://www.alistapart.com/d/horizdropdowns/framework.htm">framework</a> in place, but it’s still looking a bit plain. Let’s style those links.</p> 
+<pre>ul li a {
+	display: block;
+	text-decoration: none;
+	color: #777;
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	}
+</pre> 
+<p>I have styled the links to my taste, but they can be changed to your
+preference, as you wish. It is important to set display to “block,” as
+we want each link to take up all the available space of its containing
+list item.</p> 
+<p>So things are looking a <a href="http://www.alistapart.com/d/horizdropdowns/littlebetter.htm">little better</a>,
+although users of Internet Explorer for Windows may disagree.
+Unfortunately, IE Win interprets the line breaks between our nicely
+formatted HTML list items as white space, so you will notice that the
+menu items don’t stack up neatly in that browser. However, there is a
+way around IE’s bugs:</p> 
+<pre>/* Fix IE. Hide from IE Mac \*/
+* html ul li { float: left; }
+* html ul li a { height: 1%; }
+/* End */
+</pre>
+<p>We can apply the <a href="http://www.positioniseverything.net/">Holly Hack</a> above, which hides these rules from all browsers but IE Win. Perfect. You will notice the <code>height: 1%</code>
+rule that has also been added. Unfortunately (again!) the float fix
+uncovers another IE bug, which requires a height value to make the
+links display as block-level elements.</p>
+<p>You will also notice the need to close the menu, which can be done
+by adding the missing border to the bottom of the list. So, the <code>ul</code> rule becomes:</p>
+<pre>ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 150px;
+	border-bottom: 1px solid #ccc;
+	}
+</pre>
+<p>With some luck, everyone should now be able to see the <a href="http://www.alistapart.com/d/horizdropdowns/unfunctional.htm">unfunctional menu</a>.</p>
+
+<h2>Making it work</h2>
+<p>Now the fun bit. We need to make those sub-menus appear when we hover over the menu items.</p>
+<pre>li:hover ul { display: block; }</pre>
+<p>Voila...here’s the <a href="http://www.alistapart.com/d/horizdropdowns/barebones.htm">bare bones menu</a> in action.</p>
+<p>“Woo hoo! It works!” I hear 1% of you shout. “Awesome!”</p>
+<p>OK, OK, so that darn IE/Win has to ruin everything and not do as it’s told. IE/Win only allows the <code>:hover</code> pseudo-class to be applied to a link — so the <code>li:hover</code> that makes the sub-menus appear means nothing to IE.</p>
+
+<p>A tiny jot of JavaScript is required to kick IE back into action (line wraps marked <span class="linewrap">»</span> — <em>Ed</em>.):</p>
+<pre>startList = function() {
+if (document.all&amp;&amp;document.getElementById) {
+navRoot = document.getElementById("nav");
+for (i=0; i&lt;navRoot.childNodes.length; i++) {
+node = navRoot.childNodes[i];
+if (node.nodeName=="LI") {
+node.onmouseover=function() {
+this.className+=" over";
+  }
+  node.onmouseout=function() {
+  this.className=this.className.replace<span class="linewrap">»</span>
+	(" over", "");
+   }
+   }
+  }
+ }
+}
+window.onload=startList;
+</pre>
+<p>Great thanks and appreciation is due here to <a href="http://www.alistapart.com/authors/patrickgriffiths/">Patrick Griffiths</a> and <a href="http://www.alistapart.com/articles/dropdowns#danwebb">Dan Webb</a>, who introduced this trickery in a previous ALA article, <a href="http://www.alistapart.com/articles/dropdowns/">Suckerfish Dropdowns</a>. Thanks, guys!</p>
+<p>So, the hover rule now becomes:</p>
+
+<pre>li:hover ul, li.over ul { 
+	display: block; }</pre>
+	
+<p>Additionally, we also need to associate the JavaScript with our main <code>ul</code>, which becomes:</p>
+<pre>&lt;ul id="nav"&gt;</pre>
+
+<p>Hopefully, with the above tweaks in place, everyone should be able to see a simple version of the <a href="http://www.alistapart.com/d/horizdropdowns/horizontal.htm">menu</a> in action.</p>
+
+<h3>IE5.01 Jumping Menu Bug</h3>
+
+<p>Anyone using IE5.01 on Windows will notice that the menu jumps
+around when you hover over some of its items. The problem is easily
+fixed by modifying our previous hacks as follows:</p>
+<pre>/* Fix IE. Hide from IE Mac \*/
+* html ul li { float: left; height: 1%; }
+* html ul li a { height: 1%; }
+/* End */
+</pre>
+
+<h3>Mystery IE6 Bug:</h3>
+
+<p>During the development of this article, I uncovered a strange bug
+that I believe is only apparent in IE6. A background must be declared
+on the li a, else when a sub-menu stretches further (vertically) than
+the main menu itself, the links start to disappear before you have time
+to click them. Strange! Try it to see for yourself.</p>
+
+
+<h2>Making it your own</h2>
+<p>That’s it! A standards-friendly method for creating visually
+appealing horizontal drop-down menus. All you have to do now is add
+some hover styles and make it your own. Just to give you a taste,
+here’s <a href="http://www.alistapart.com/d/horizdropdowns/horizontal2.htm">a prettier one</a> I prepared earlier. Enjoy!</p>
+		</div>
+		
+		<div id="learnmore">
+		  <h2>Learn More</h2>
+		  <p>Related Topics: <a href="http://www.alistapart.com/topics/topic/browsers/" title="Browsers">Browsers</a>, <a href="http://www.alistapart.com/topics/topic/css/" title="CSS">CSS</a>, <a href="http://www.alistapart.com/topics/topic/htmlxhtml/" title="HTML and XHTML">HTML and XHTML</a>, <a href="http://www.alistapart.com/topics/topic/layout/" title="Layout">Layout</a></p>
+		</div>
+		
+					<div class="discuss">
+			  <h2>Discuss</h2>
+			  <p>Was it good for you, too?  <a href="http://www.alistapart.com/comments/horizdropdowns/">Join the discussion »</a></p>
+			</div>
+				
+		<div id="authorbio">
+			
+			<h2>About the Author</h2>
+			
+			
+	
+	<p>
+					<img src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/nick_rigby.jpg" alt=" Nick Rigby">
+		
+		Nick Rigby is a freelance web standards and accessibility developer for his company, <a href="http://www.puretic.com./">Puretic</a>
+In between work he enjoys football, music, being creative, and writing
+the occasional article for "nickrigby.com":http://www.nickrigby.com. </p>
+	
+
+		
+		</div>
+		
+	</div>
+	
+	<div id="sidebar" class="column">
+	
+		<div class="first">
+	<form method="post" action="http://www.alistapart.com/">
+<div class="hiddenFields">
+<input name="ACT" value="19" type="hidden">
+<input name="XID" value="f5f1e7689750369596248bf9c246778c3ca92b13" type="hidden">
+<input name="RP" value="search/results" type="hidden">
+<input name="NRP" value="" type="hidden">
+<input name="RES" value="20" type="hidden">
+<input name="status" value="" type="hidden">
+<input name="weblog" value="articles|issues" type="hidden">
+<input name="search_in" value="entries" type="hidden">
+<input name="where" value="all" type="hidden">
+<input name="site_id" value="1" type="hidden">
+</div>
+
+
+	<h3>Search ALA</h3>
+	<input name="keywords" id="search" type="text">
+	<input src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/go.gif" id="submit" value="Search" type="image">
+	<p><input name="incdisc" id="incdisc" value="comments|entries" onclick="this.form.elements['search_in'].value = (this.checked) ? 'everywhere' : 'entries';" type="checkbox"> include discussions</p>
+	</form>
+</div>
+
+<div id="topiclist">
+	<h3>Topics</h3>
+
+	<ul>
+	
+	<li><a href="http://www.alistapart.com/topics/code/" title="Code">Code</a></li>
+	
+	<li><a href="http://www.alistapart.com/topics/content/" title="Content">Content</a></li>
+	
+	<li><a href="http://www.alistapart.com/topics/culture/" title="Culture">Culture</a></li>
+	
+	<li><a href="http://www.alistapart.com/topics/design/" title="Design">Design</a></li>
+	
+	<li><a href="http://www.alistapart.com/topics/process/" title="Process">Process</a></li>
+	
+	<li><a href="http://www.alistapart.com/topics/userscience/" title="User Science">User Science</a></li>
+	
+	</ul>
+
+</div>
+
+
+<div id="snapshot">
+  <h3>Snapshot</h3>
+  <p>Multi-tiered drop-down
+menus can be a hassle to build and maintain — especially when they rely
+on big, honking chunks of JavaScript. Nick Rigby presents a way to
+handle this common navigation element with a cleanly structured XHTML
+list, straightforward CSS, and only a few concessions to browser quirks.</p>
+</div>
+
+
+<div id="lucre">
+	<script type="text/javascript">
+	//<![CDATA[
+	(function(id) {
+	  document.write('<script type="text/javascript" src="' +
+	    'http://www.northmay.com/deck/deck' + id + '_js.php?' +
+	    (new Date().getTime()) + '"></' + 'script>');
+	})("AL");
+	//]]>
+	</script><script type="text/javascript" src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/deckAL_js.htm"></script>
+	<p>
+	<a href="http://www.coudal.com/deck/">Ad via The Deck</a>
+	</p>
+</div>
+
+<div id="jobboard">
+	<h4>Job Board</h4>
+	<script src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/job.fcgi" type="text/javascript"></script><div class="job">
+  <a href="http://37signals.com/jobs/6395">Sparkart Group, Inc is looking for a Product Developer.</a>
+</div>
+
+
+	<p class="monitor">More on the <a href="http://jobs.37signals.com/?source=ala">Job Board</a>.</p>
+</div>
+
+<div id="colophon">
+
+	<p class="init">
+	Hosted by
+	<a href="http://mediatemple.net/"><img src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/mediatemple.png" alt="Hosted by Media Temple"></a>
+	</p>
+
+	<p>
+	Published by
+	<a href="http://happycog.com/"><img src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/happycog.png" title="" alt="Published by Happy Cog"></a>
+	</p>
+</div>
+		
+	</div>
+	
+	
+
+</div>
+
+<div id="footer">
+<p>
+<span class="issn">ISSN: <b>1534-0295</b></span>
+<span class="copyright"><a href="http://www.alistapart.com/copyright/" rel="license">Copyright ©</a> <span class="years">1998-2010</span> A List Apart Magazine and the authors.</span>
+</p>
+</div>
+
+<script src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/a" type="text/javascript"></script><img src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/a.htm" alt="" style="position: absolute; left: -9999px;" onload="this.parentNode.removeChild(this);">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="A%20List%20Apart%20%20Articles%20%20Drop-Down%20Menus,%20Horizontal%20Style_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11757054-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+</body></html>

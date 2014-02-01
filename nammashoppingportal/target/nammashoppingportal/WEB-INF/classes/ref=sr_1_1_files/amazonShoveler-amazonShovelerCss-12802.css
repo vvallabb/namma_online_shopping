@@ -1,0 +1,153 @@
+
+.shoveler {
+    position: relative;
+    width: 100%;
+}
+
+.shoveler .shoveler-content {
+    margin: 0 45px;
+}
+.shoveler ul {
+    height: 150px; 
+    padding: 0;
+    overflow: hidden;
+}
+
+* html .shoveler ul li {
+    display: inline;
+}
+.shoveler ul li {
+    float: left;
+    margin: 0;
+    padding: 10px 0 0 0;
+    width: 180px;  
+    height: 100%;
+    list-style: none;
+}
+.shoveler ul li.shoveler-progress {
+    background: no-repeat center url(http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/shoveler/loading-indicator._V31970667_.gif);
+}
+.shoveler .start-over {
+    font-size: x-small;    
+}
+
+
+.shoveler div.button {
+    position: absolute;
+    height: 50px; 
+    width: 25px;
+    top: 55px; 
+    cursor: pointer;
+}
+.shoveler div.button.disabled {
+    opacity: 0.5; 
+    -moz-opacity: 0.5; 
+    filter: alpha(opacity=50); 
+    cursor: default;
+}
+.shoveler div.button.depressed {
+    background-position: 0 -50px;
+}
+.shoveler div.button.disabled.depressed {
+    background-position: 0 0;
+}
+.shoveler div.prev-button {
+    background: no-repeat url(http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/shoveler/left-arrow-semi-rd._V17361814_.gif);
+    left: 10px;
+}
+.shoveler div.next-button {
+    background: no-repeat url(http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/shoveler/right-arrow-semi-rd._V17361809_.gif);
+    right: 10px;
+}
+
+
+.shoveler .shoveler-pagination {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+}
+
+
+.shoveler.testing ul {
+    background-color: yellow;
+}
+.shoveler .debug-info {
+    display: none;    
+}
+.shoveler.testing .debug-info {
+    font-weight: bold;
+    background-color: pink;
+}    
+.shoveler.testing span.debug-info {
+    display: inline;
+}
+.shoveler.testing div.debug-info {
+    display: block;
+}
+.shoveler.testing ul li {
+    background-color: lime;
+     
+}
+
+
+
+
+.shoveler.default-style .shoveler-header {
+    border: 1px solid #9DC4D8;
+	border-width: 1px 1px 0 1px;
+    background: bottom left repeat-x #eff5f9 url(http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/yourstore/box/sliced_box_fill/sliced-box-tbevel._V47082452_.gif);
+}
+.shoveler.default-style .shoveler-title {
+    padding: 5px 7px;
+	
+}
+
+
+.shoveler.default-style .shoveler-main {
+    border: 1px solid #9DC4D8; 
+    border-width: 1px 1px 0 1px;
+    position: relative;
+}
+
+
+.shoveler.default-style .shoveler-footer {
+	border: 1px solid #9DC4D8;
+	border-width: 0 1px 1px 1px;
+}
+
+
+
+.shoveler.default-style .shoveler-footer-content {
+	height: 16px; 
+	line-height: 16px;
+}
+
+
+.shoveler.default-style .shoveler-upper-left,
+.shoveler.default-style .shoveler-upper-right,
+.shoveler.default-style .shoveler-bottom-left,
+.shoveler.default-style .shoveler-bottom-right 
+{
+    width: 17px;
+    height: 17px;
+    position: absolute;
+}
+
+.shoveler.default-style .shoveler-upper-left   { }
+.shoveler.default-style .shoveler-upper-right  { position: relative; float: right; }
+.shoveler.default-style .shoveler-bottom-left  { }
+.shoveler.default-style .shoveler-bottom-right { position: relative; float: right; }
+
+.shoveler.default-style div.shoveler-upper-left {
+    background: no-repeat top left url(http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/yourstore/box/sliced_box_fill/sliced-box-tl._V6007502_.gif);
+}
+.shoveler.default-style div.shoveler-upper-right {
+    background: no-repeat top right url(http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/yourstore/box/sliced_box_fill/sliced-box-tr._V6007499_.gif);
+}
+.shoveler.default-style div.shoveler-bottom-left {
+    background: no-repeat bottom left url(http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/yourstore/box/sliced-box-bl._V47082482_.gif);
+}
+.shoveler.default-style div.shoveler-bottom-right {
+    background: no-repeat bottom right url(http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/yourstore/box/sliced-box-br._V47062575_.gif);
+}
