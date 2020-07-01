@@ -13,7 +13,7 @@
 		<junit.version>4.11</junit.version>
 		<jdk.version>1.6</jdk.version>
 		<servlet.version>3.0.1</servlet.version>
-		<mysql.version>5.1.6</mysql.version>
+		<mysql.version>8.0.16</mysql.version>
 		<jstl.version>1.2</jstl.version>
 		<jsp.version>2.1</jsp.version>
 		<slf4jVersion>1.6.1</slf4jVersion>
